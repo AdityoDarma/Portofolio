@@ -776,93 +776,8 @@ a {
   color: #fff;
 }
 
-.ach-slider {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-snap-type: x proximity;
-  padding-bottom: 8px;
-  scrollbar-width: none;
-}
-
-.ach-slider::-webkit-scrollbar {
+.card[hidden] {
   display: none;
-}
-
-.ach-card {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  background: #f4f4f6;
-  border-radius: 24px;
-  padding: 20px 20px 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ach-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
-}
-
-.ach-card[hidden] {
-  display: none;
-}
-
-.ach-photo {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: 16px;
-  margin-bottom: 18px;
-  background: linear-gradient(160deg, #e4e0f7 0%, #c9c0f2 100%);
-  background-size: cover;
-  background-position: center;
-}
-
-.ach-card[data-category="lomba"] .ach-photo {
-  background-image: linear-gradient(160deg, #f3e7d8 0%, #e0c9a6 100%);
-}
-
-.ach-badge {
-  align-self: flex-start;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid #e4e4e7;
-  color: #52525b;
-  margin-bottom: 14px;
-}
-
-.ach-title-card {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 8px;
-  color: #18181b;
-}
-
-.ach-org {
-  font-size: 14.5px;
-  color: #52525b;
-  margin-bottom: 4px;
-}
-
-.ach-date {
-  font-size: 13.5px;
-  color: #a1a1aa;
-}
-
-.ach-link {
-  margin-top: 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #6b4de6;
-}
-
-.ach-link:hover {
-  opacity: 0.7;
 }
 
 /* ================= PROCESS ================= */
@@ -1026,58 +941,6 @@ a {
   color: #71717a;
   max-width: 620px;
   margin: 0 auto;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin-bottom: 48px;
-}
-
-.blog-photo {
-  width: 100%;
-  aspect-ratio: 4 / 2.7;
-  border-radius: 18px;
-  margin-bottom: 20px;
-  background-size: cover;
-  background-position: center;
-}
-
-.photo-1 {
-  background: linear-gradient(120deg, rgba(30, 35, 50, 0.15), transparent 60%), linear-gradient(160deg, #dfe3ea 0%, #c7ccd6 50%, #9aa1b0 100%);
-}
-
-.photo-2 {
-  background: linear-gradient(120deg, rgba(60, 45, 35, 0.12), transparent 60%), linear-gradient(160deg, #f3e7d8 0%, #e7d5bd 50%, #d8c2a0 100%);
-}
-
-.photo-3 {
-  background: linear-gradient(120deg, rgba(90, 60, 40, 0.15), transparent 60%), linear-gradient(160deg, #ecd9c8 0%, #d9b998 50%, #b98f68 100%);
-}
-
-/* Ganti masing-masing dengan foto asli:
-   .photo-1 { background-image: url("../assets/images/blog-1.jpg"); }
-*/
-
-.blog .card .date {
-  font-size: 13.5px;
-  color: #a1a1aa;
-  margin-bottom: 10px;
-}
-
-.blog .card h3 {
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 12px;
-  color: #18181b;
-}
-
-.blog .card p.desc {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: #71717a;
 }
 
 /* ================= FOOTER ================= */
@@ -1299,10 +1162,6 @@ footer hr {
     font-size: 36px;
   }
 
-  .ach-card {
-    flex: 0 0 260px;
-  }
-
   .skills {
     padding: 40px 24px;
   }
@@ -1332,10 +1191,6 @@ footer hr {
 
   .blog-title {
     font-size: 30px;
-  }
-
-  .cards-grid {
-    grid-template-columns: 1fr;
   }
 
   .footer-nav {

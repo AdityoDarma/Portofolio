@@ -183,32 +183,38 @@
       </p>
     </div>
 
+    <!--
+      CARA MENAMBAH PROYEK: salin satu blok <div class="card plain"> di bawah (kartu pertama "primary" = kartu ungu sorotan).
+      Foto: ganti <div class="card-photo"></div> menjadi
+            <div class="card-photo" style="background-image: url('assets/images/NAMA-FILE.jpg');"></div>
+      Teks [dalam kurung siku] hanya placeholder — ganti sebelum deploy.
+    -->
     <div class="cards-scroll">
       <div class="card primary">
-        <div class="card-top"><span class="date-pill">15/08/2024</span><span class="arrow-btn">›</span></div>
-        <h3>Brand Discovery Session</h3>
-        <p class="desc">Gain clarity on your strengths, values, and brand positioning.</p>
+        <div class="card-top"><span class="date-pill">[DD/MM/YYYY]</span><span class="arrow-btn">›</span></div>
+        <h3>[Judul Proyek 1]</h3>
+        <p class="desc">[Deskripsi singkat proyek: masalah yang diselesaikan dan teknologi yang dipakai.]</p>
         <div class="card-photo" style="background-image: url('assets/images/service-1.jpg');"></div>
       </div>
 
       <div class="card plain">
-        <div class="card-top"><span class="date-pill">19/12/2024</span><span class="arrow-btn">›</span></div>
-        <h3>Brand Coaching Program</h3>
-        <p class="desc">A deep-dive program to shape your story, image, and online presence.</p>
+        <div class="card-top"><span class="date-pill">[DD/MM/YYYY]</span><span class="arrow-btn">›</span></div>
+        <h3>[Judul Proyek 2]</h3>
+        <p class="desc">[Deskripsi singkat proyek: masalah yang diselesaikan dan teknologi yang dipakai.]</p>
         <div class="card-photo"></div>
       </div>
 
       <div class="card plain">
-        <div class="card-top"><span class="date-pill">30/12/2024</span><span class="arrow-btn">›</span></div>
-        <h3>LinkedIn &amp; Social Profile Makeover</h3>
-        <p class="desc">Optimize your digital footprint for visibility and impact.</p>
+        <div class="card-top"><span class="date-pill">[DD/MM/YYYY]</span><span class="arrow-btn">›</span></div>
+        <h3>[Judul Proyek 3]</h3>
+        <p class="desc">[Deskripsi singkat proyek: masalah yang diselesaikan dan teknologi yang dipakai.]</p>
         <div class="card-photo"></div>
       </div>
 
       <div class="card plain">
-        <div class="card-top"><span class="date-pill">27/04/2024</span><span class="arrow-btn">›</span></div>
-        <h3>Content Strategy &amp; Visibility Coaching</h3>
-        <p class="desc">Learn how to create content that builds authority and trust.</p>
+        <div class="card-top"><span class="date-pill">[DD/MM/YYYY]</span><span class="arrow-btn">›</span></div>
+        <h3>[Judul Proyek 4]</h3>
+        <p class="desc">[Deskripsi singkat proyek: masalah yang diselesaikan dan teknologi yang dipakai.]</p>
         <div class="card-photo"></div>
       </div>
     </div>
@@ -220,13 +226,12 @@
 
   <!-- ================= ACHIEVEMENTS ================= -->
   <!--
-    CARA MENAMBAH ITEM: salin satu blok <article class="ach-card" ...> di bawah, lalu ubah:
-      - data-category  → "sertifikat" atau "lomba" (dipakai tombol filter)
-      - ach-badge      → teks label kategori
-      - ach-photo      → hapus style kalau tidak ada gambar, atau isi url(assets/images/NAMA-FILE.jpg)
-      - ach-title / ach-org / ach-date → judul, penyelenggara, tanggal
-      - ach-link       → link sertifikat / postingan (hapus baris <a> kalau tidak ada)
-    Semua teks [dalam kurung siku] di bawah ini hanya placeholder — ganti atau hapus sebelum deploy.
+    CARA MENAMBAH ITEM: salin satu blok <div class="card plain" ...> di bawah (struktur sama dengan kartu My Work), lalu ubah:
+      - data-category → "sertifikat" atau "lomba" (dipakai tombol filter)
+      - date-pill, h3, desc → tanggal, judul, penyelenggara
+      - card-photo → isi style="background-image: url('assets/images/NAMA-FILE.jpg');" kalau ada gambar
+      - Kalau ada link sertifikat, bungkus <span class="arrow-btn">›</span> dengan <a href="URL" target="_blank" rel="noopener"> dan pindahkan class arrow-btn ke <a>
+    Teks [dalam kurung siku] hanya placeholder — ganti atau hapus sebelum deploy.
   -->
   <section class="achievements" id="achievements" data-nav-theme="light">
     <div class="ach-header">
@@ -242,40 +247,34 @@
       </div>
     </div>
 
-    <div class="ach-slider">
-      <article class="ach-card" data-category="sertifikat">
-        <div class="ach-photo"></div>
-        <span class="ach-badge">Certificate</span>
-        <h3 class="ach-title-card">[Judul Sertifikat 1]</h3>
-        <p class="ach-org">[Penyelenggara]</p>
-        <p class="ach-date">[Bulan Tahun]</p>
-        <a class="ach-link" href="#" target="_blank" rel="noopener">View credential →</a>
-      </article>
+    <div class="cards-scroll">
+      <div class="card primary" data-category="sertifikat">
+        <div class="card-top"><span class="date-pill">[Bulan Tahun]</span><span class="arrow-btn">›</span></div>
+        <h3>[Judul Sertifikat 1]</h3>
+        <p class="desc">[Penyelenggara]</p>
+        <div class="card-photo"></div>
+      </div>
 
-      <article class="ach-card" data-category="sertifikat">
-        <div class="ach-photo"></div>
-        <span class="ach-badge">Certificate</span>
-        <h3 class="ach-title-card">[Judul Sertifikat 2]</h3>
-        <p class="ach-org">[Penyelenggara]</p>
-        <p class="ach-date">[Bulan Tahun]</p>
-      </article>
+      <div class="card plain" data-category="sertifikat">
+        <div class="card-top"><span class="date-pill">[Bulan Tahun]</span><span class="arrow-btn">›</span></div>
+        <h3>[Judul Sertifikat 2]</h3>
+        <p class="desc">[Penyelenggara]</p>
+        <div class="card-photo"></div>
+      </div>
 
-      <article class="ach-card" data-category="lomba">
-        <div class="ach-photo"></div>
-        <span class="ach-badge">Competition</span>
-        <h3 class="ach-title-card">[Nama Lomba / Pencapaian]</h3>
-        <p class="ach-org">[Penyelenggara]</p>
-        <p class="ach-date">[Bulan Tahun]</p>
-        <a class="ach-link" href="#" target="_blank" rel="noopener">Read more →</a>
-      </article>
+      <div class="card plain" data-category="lomba">
+        <div class="card-top"><span class="date-pill">[Bulan Tahun]</span><span class="arrow-btn">›</span></div>
+        <h3>[Nama Lomba / Pencapaian 1]</h3>
+        <p class="desc">[Penyelenggara]</p>
+        <div class="card-photo"></div>
+      </div>
 
-      <article class="ach-card" data-category="lomba">
-        <div class="ach-photo"></div>
-        <span class="ach-badge">Competition</span>
-        <h3 class="ach-title-card">[Nama Lomba / Pencapaian]</h3>
-        <p class="ach-org">[Penyelenggara]</p>
-        <p class="ach-date">[Bulan Tahun]</p>
-      </article>
+      <div class="card plain" data-category="lomba">
+        <div class="card-top"><span class="date-pill">[Bulan Tahun]</span><span class="arrow-btn">›</span></div>
+        <h3>[Nama Lomba / Pencapaian 2]</h3>
+        <p class="desc">[Penyelenggara]</p>
+        <div class="card-photo"></div>
+      </div>
     </div>
   </section>
 
@@ -336,31 +335,31 @@
     </div>
 
     <!--
-      CARA MENAMBAH KEGIATAN: salin satu blok <article class="card"> di bawah.
-      Foto: ganti style="background-image: url(assets/images/NAMA-FILE.jpg)" (hapus class photo-2/photo-3 kalau pakai foto).
+      CARA MENAMBAH KEGIATAN: salin satu blok <div class="card plain"> di bawah (struktur sama dengan kartu My Work).
+      Foto: <div class="card-photo" style="background-image: url('assets/images/NAMA-FILE.jpg');"></div>
       Teks [dalam kurung siku] hanya placeholder — ganti sebelum deploy.
     -->
-    <div class="cards-grid">
-      <article class="card">
-        <div class="blog-photo" style="background-image: url(assets/images/blog-1.jpg);"></div>
-        <div class="date">[Tanggal Kegiatan]</div>
+    <div class="cards-scroll">
+      <div class="card primary">
+        <div class="card-top"><span class="date-pill">[Tanggal Kegiatan]</span><span class="arrow-btn">›</span></div>
         <h3>[Judul Kegiatan 1]</h3>
         <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
-      </article>
+        <div class="card-photo" style="background-image: url('assets/images/blog-1.jpg');"></div>
+      </div>
 
-      <article class="card">
-        <div class="blog-photo photo-2"></div>
-        <div class="date">[Tanggal Kegiatan]</div>
+      <div class="card plain">
+        <div class="card-top"><span class="date-pill">[Tanggal Kegiatan]</span><span class="arrow-btn">›</span></div>
         <h3>[Judul Kegiatan 2]</h3>
         <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
-      </article>
+        <div class="card-photo"></div>
+      </div>
 
-      <article class="card">
-        <div class="blog-photo photo-3"></div>
-        <div class="date">[Tanggal Kegiatan]</div>
+      <div class="card plain">
+        <div class="card-top"><span class="date-pill">[Tanggal Kegiatan]</span><span class="arrow-btn">›</span></div>
         <h3>[Judul Kegiatan 3]</h3>
         <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
-      </article>
+        <div class="card-photo"></div>
+      </div>
     </div>
   </section>
 

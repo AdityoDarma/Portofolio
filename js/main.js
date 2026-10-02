@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
      2b. Filter Achievements (Semua / Sertifikat / Lomba)
   ───────────────────────────────────────── */
   const achFilters = document.querySelectorAll(".ach-filter");
-  const achCards = document.querySelectorAll(".ach-card");
+  const achCards = document.querySelectorAll(".achievements .card");
 
   achFilters.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       achCards.forEach((card) => {
         card.hidden = filter !== "all" && card.dataset.category !== filter;
       });
-      const slider = document.querySelector(".ach-slider");
+      const slider = document.querySelector(".achievements .cards-scroll");
       if (slider) slider.scrollTo({ left: 0 });
     });
   });
