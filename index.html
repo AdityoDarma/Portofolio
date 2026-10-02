@@ -218,6 +218,67 @@
     </div>
   </section>
 
+  <!-- ================= ACHIEVEMENTS ================= -->
+  <!--
+    CARA MENAMBAH ITEM: salin satu blok <article class="ach-card" ...> di bawah, lalu ubah:
+      - data-category  → "sertifikat" atau "lomba" (dipakai tombol filter)
+      - ach-badge      → teks label kategori
+      - ach-photo      → hapus style kalau tidak ada gambar, atau isi url(assets/images/NAMA-FILE.jpg)
+      - ach-title / ach-org / ach-date → judul, penyelenggara, tanggal
+      - ach-link       → link sertifikat / postingan (hapus baris <a> kalau tidak ada)
+    Semua teks [dalam kurung siku] di bawah ini hanya placeholder — ganti atau hapus sebelum deploy.
+  -->
+  <section class="achievements" id="achievements" data-nav-theme="light">
+    <div class="ach-header">
+      <div>
+        <div class="eyebrow"><span class="line"></span><span>Achievements</span></div>
+        <h2 class="ach-title">Certificates <span class="accent">&amp; Competitions</span></h2>
+      </div>
+
+      <div class="ach-filters" role="group" aria-label="Filter achievements">
+        <button type="button" class="ach-filter active" data-filter="all">All</button>
+        <button type="button" class="ach-filter" data-filter="sertifikat">Certificates</button>
+        <button type="button" class="ach-filter" data-filter="lomba">Competitions</button>
+      </div>
+    </div>
+
+    <div class="ach-slider">
+      <article class="ach-card" data-category="sertifikat">
+        <div class="ach-photo"></div>
+        <span class="ach-badge">Certificate</span>
+        <h3 class="ach-title-card">[Judul Sertifikat 1]</h3>
+        <p class="ach-org">[Penyelenggara]</p>
+        <p class="ach-date">[Bulan Tahun]</p>
+        <a class="ach-link" href="#" target="_blank" rel="noopener">View credential →</a>
+      </article>
+
+      <article class="ach-card" data-category="sertifikat">
+        <div class="ach-photo"></div>
+        <span class="ach-badge">Certificate</span>
+        <h3 class="ach-title-card">[Judul Sertifikat 2]</h3>
+        <p class="ach-org">[Penyelenggara]</p>
+        <p class="ach-date">[Bulan Tahun]</p>
+      </article>
+
+      <article class="ach-card" data-category="lomba">
+        <div class="ach-photo"></div>
+        <span class="ach-badge">Competition</span>
+        <h3 class="ach-title-card">[Nama Lomba / Pencapaian]</h3>
+        <p class="ach-org">[Penyelenggara]</p>
+        <p class="ach-date">[Bulan Tahun]</p>
+        <a class="ach-link" href="#" target="_blank" rel="noopener">Read more →</a>
+      </article>
+
+      <article class="ach-card" data-category="lomba">
+        <div class="ach-photo"></div>
+        <span class="ach-badge">Competition</span>
+        <h3 class="ach-title-card">[Nama Lomba / Pencapaian]</h3>
+        <p class="ach-org">[Penyelenggara]</p>
+        <p class="ach-date">[Bulan Tahun]</p>
+      </article>
+    </div>
+  </section>
+
   <!-- ================= PROCESS ================= -->
   <section class="process" data-nav-theme="light">
     <div class="left">
@@ -274,28 +335,31 @@
       </p>
     </div>
 
+    <!--
+      CARA MENAMBAH KEGIATAN: salin satu blok <article class="card"> di bawah.
+      Foto: ganti style="background-image: url(assets/images/NAMA-FILE.jpg)" (hapus class photo-2/photo-3 kalau pakai foto).
+      Teks [dalam kurung siku] hanya placeholder — ganti sebelum deploy.
+    -->
     <div class="cards-grid">
       <article class="card">
         <div class="blog-photo" style="background-image: url(assets/images/blog-1.jpg);"></div>
-        <div class="date">July 10, 2025</div>
-        <h3>Insights &amp; Strategies for Building Your Personal Brand</h3>
-        <p class="desc">Learn how to craft a consistent tone that reflects your values and builds trust with your
-          audience.</p>
+        <div class="date">[Tanggal Kegiatan]</div>
+        <h3>[Judul Kegiatan 1]</h3>
+        <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
       </article>
 
       <article class="card">
         <div class="blog-photo photo-2"></div>
-        <div class="date">June 28, 2025</div>
-        <h3>Optimizing Your LinkedIn Profile in 2025</h3>
-        <p class="desc">Your profile is your first impression—here's how to make it powerful, professional, and
-          searchable.</p>
+        <div class="date">[Tanggal Kegiatan]</div>
+        <h3>[Judul Kegiatan 2]</h3>
+        <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
       </article>
 
       <article class="card">
         <div class="blog-photo photo-3"></div>
-        <div class="date">July 2, 2025</div>
-        <h3>Why Content is the Currency of Personal Branding</h3>
-        <p class="desc">Discover how valuable, authentic content can position you as an authority in your field.</p>
+        <div class="date">[Tanggal Kegiatan]</div>
+        <h3>[Judul Kegiatan 3]</h3>
+        <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
       </article>
     </div>
   </section>

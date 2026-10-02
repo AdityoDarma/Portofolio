@@ -50,6 +50,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ─────────────────────────────────────────
+     2b. Filter Achievements (Semua / Sertifikat / Lomba)
+  ───────────────────────────────────────── */
+  const achFilters = document.querySelectorAll(".ach-filter");
+  const achCards = document.querySelectorAll(".ach-card");
+
+  achFilters.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
+      achFilters.forEach((b) => b.classList.toggle("active", b === btn));
+      achCards.forEach((card) => {
+        card.hidden = filter !== "all" && card.dataset.category !== filter;
+      });
+      const slider = document.querySelector(".ach-slider");
+      if (slider) slider.scrollTo({ left: 0 });
+    });
+  });
+
+
+  /* ─────────────────────────────────────────
      3. Hamburger Menu Mobile
   ───────────────────────────────────────── */
   const hamburgerBtn = document.getElementById("hamburgerBtn");
