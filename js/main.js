@@ -54,10 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ───────────────────────────────────────── */
   const hamburgerBtn = document.getElementById("hamburgerBtn");
   const mobileNav = document.getElementById("mobileNav");
-  const closeNav = document.getElementById("closeNav");
 
   function openMobileNav() {
     hamburgerBtn.classList.add("open");
+    hamburgerBtn.setAttribute("aria-expanded", "true");
     mobileNav.classList.add("open");
     document.body.style.overflow = "hidden"; // cegah scroll saat nav terbuka
   }
@@ -65,12 +65,26 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeMobileNav() {
     if (!hamburgerBtn || !mobileNav) return;
     hamburgerBtn.classList.remove("open");
+    hamburgerBtn.setAttribute("aria-expanded", "false");
     mobileNav.classList.remove("open");
     document.body.style.overflow = "";
   }
 
-  if (hamburgerBtn) hamburgerBtn.addEventListener("click", openMobileNav);
-  if (closeNav) closeNav.addEventListener("click", closeMobileNav);
+  // Hamburger berubah jadi ✕ saat menu terbuka, jadi tombolnya toggle
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener("click", () => {
+      if (mobileNav.classList.contains("open")) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
+    });
+  }
+
+  // Tutup dengan tombol Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMobileNav();
+  });
 
   // Tutup juga jika klik di luar nav
   if (mobileNav) {
@@ -132,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
   const allSections = document.querySelectorAll("section, footer");
 
-  window.addEventListener("scroll", () => {
+  function updateNavbar() {
     if (window.scrollY > 60) {
       navbarWrap.classList.add("scrolled");
     } else {
@@ -158,8 +172,11 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       navbar.classList.remove("nav-light");
     }
-  }, { passive: true });
+  }
 
-  // Trigger scroll event on load to set initial state
-  window.dispatchEvent(new Event("scroll"));
+  window.addEventListener("scroll", updateNavbar, { passive: true });
+  window.addEventListener("resize", updateNavbar);
+  // load: browser bisa memulihkan posisi scroll setelah reload / buka link #anchor
+  window.addEventListener("load", updateNavbar);
+  updateNavbar();
 });
