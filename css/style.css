@@ -383,7 +383,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 80px 40px;
+  padding: 120px 80px 96px;
 }
 
 .hero-content h1 {
@@ -430,44 +430,6 @@ a {
   font-size: 15px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.85);
-}
-
-.stats-bar {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 80px 48px;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.stat {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.stat .icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-
-.stat .value {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.stat .label {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
 }
 
 /* ================= ABOUT ================= */
@@ -1042,8 +1004,7 @@ footer hr {
 @media (max-width: 900px) {
 
   .navbar-wrap,
-  .hero-content,
-  .stats-bar {
+  .hero-content {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -1062,10 +1023,6 @@ footer hr {
 
   .hero-content h1 {
     font-size: 36px;
-  }
-
-  .stats-bar {
-    justify-content: flex-start;
   }
 
   .about {
