@@ -69,6 +69,73 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ─────────────────────────────────────────
+     2c. Blog carousel (satu kartu besar, panah + swipe)
+  ───────────────────────────────────────── */
+  const blogCarousel = document.getElementById("blogCarousel");
+  if (blogCarousel) {
+    const track = blogCarousel.querySelector(".blog-track");
+    const viewport = blogCarousel.querySelector(".blog-viewport");
+    const slides = track.children;
+    const counter = document.getElementById("blogCounter");
+    let current = 0;
+
+    const pad = (n) => String(n).padStart(2, "0");
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length; // berputar
+      track.style.transform = `translateX(-${current * 100}%)`;
+      counter.textContent = `${pad(current + 1)} / ${pad(slides.length)}`;
+    }
+
+    document.getElementById("blogPrev").addEventListener("click", () => goTo(current - 1));
+    document.getElementById("blogNext").addEventListener("click", () => goTo(current + 1));
+
+    // Keyboard: panah kiri/kanan saat carousel difokuskan
+    blogCarousel.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") goTo(current - 1);
+      if (e.key === "ArrowRight") goTo(current + 1);
+    });
+
+    // Swipe / drag
+    let startX = 0;
+    let dragging = false;
+
+    viewport.addEventListener("pointerdown", (e) => {
+      dragging = true;
+      startX = e.clientX;
+      track.classList.add("dragging");
+    });
+
+    viewport.addEventListener("pointermove", (e) => {
+      if (!dragging) return;
+      const dx = e.clientX - startX;
+      track.style.transform = `translateX(calc(-${current * 100}% + ${dx}px))`;
+    });
+
+    function endDrag(e) {
+      if (!dragging) return;
+      dragging = false;
+      track.classList.remove("dragging");
+      const dx = e.clientX - startX;
+      if (dx < -50) goTo(current + 1);
+      else if (dx > 50) goTo(current - 1);
+      else goTo(current);
+    }
+
+    viewport.addEventListener("pointerup", endDrag);
+    viewport.addEventListener("pointercancel", endDrag);
+    viewport.addEventListener("pointerleave", endDrag);
+
+    goTo(0);
+  }
+
+  // Link placeholder href="#" jangan melompat ke atas halaman
+  document.querySelectorAll('a[href="#"]').forEach((a) => {
+    a.addEventListener("click", (e) => e.preventDefault());
+  });
+
+
+  /* ─────────────────────────────────────────
      3. Hamburger Menu Mobile
   ───────────────────────────────────────── */
   const hamburgerBtn = document.getElementById("hamburgerBtn");

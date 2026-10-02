@@ -335,31 +335,47 @@
     </div>
 
     <!--
-      CARA MENAMBAH KEGIATAN: salin satu blok <div class="card plain"> di bawah (struktur sama dengan kartu My Work).
+      CARA MENAMBAH KEGIATAN: salin satu blok <div class="card plain blog-slide"> di bawah (struktur sama dengan kartu My Work).
       Foto: <div class="card-photo" style="background-image: url('assets/images/NAMA-FILE.jpg');"></div>
+      Counter "01 / 03" dan tombol panah menyesuaikan jumlah slide otomatis.
       Teks [dalam kurung siku] hanya placeholder — ganti sebelum deploy.
     -->
-    <div class="cards-scroll">
-      <div class="card primary">
-        <div class="card-top"><span class="date-pill">[Tanggal Kegiatan]</span><span class="arrow-btn">›</span></div>
-        <h3>[Judul Kegiatan 1]</h3>
-        <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
-        <div class="card-photo" style="background-image: url('assets/images/blog-1.jpg');"></div>
+    <div class="blog-carousel" id="blogCarousel">
+      <div class="blog-viewport">
+        <div class="blog-track">
+        <div class="card primary blog-slide">
+          <div class="card-top"><span class="date-pill">[Tanggal Kegiatan]</span><span class="arrow-btn">›</span></div>
+          <h3>[Judul Kegiatan 1]</h3>
+          <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
+          <div class="card-photo" style="background-image: url('assets/images/blog-1.jpg');"></div>
+        </div>
+
+        <div class="card plain blog-slide">
+          <div class="card-top"><span class="date-pill">[Tanggal Kegiatan]</span><span class="arrow-btn">›</span></div>
+          <h3>[Judul Kegiatan 2]</h3>
+          <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
+          <div class="card-photo"></div>
+        </div>
+
+        <div class="card plain blog-slide">
+          <div class="card-top"><span class="date-pill">[Tanggal Kegiatan]</span><span class="arrow-btn">›</span></div>
+          <h3>[Judul Kegiatan 3]</h3>
+          <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
+          <div class="card-photo"></div>
+        </div>
+        </div>
       </div>
 
-      <div class="card plain">
-        <div class="card-top"><span class="date-pill">[Tanggal Kegiatan]</span><span class="arrow-btn">›</span></div>
-        <h3>[Judul Kegiatan 2]</h3>
-        <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
-        <div class="card-photo"></div>
+      <div class="blog-controls">
+        <button type="button" class="blog-nav" id="blogPrev" aria-label="Previous post">←</button>
+        <span class="blog-counter" id="blogCounter" aria-live="polite">01 / 03</span>
+        <button type="button" class="blog-nav" id="blogNext" aria-label="Next post">→</button>
       </div>
+    </div>
 
-      <div class="card plain">
-        <div class="card-top"><span class="date-pill">[Tanggal Kegiatan]</span><span class="arrow-btn">›</span></div>
-        <h3>[Judul Kegiatan 3]</h3>
-        <p class="desc">[Cerita singkat 1–2 kalimat tentang kegiatan ini.]</p>
-        <div class="card-photo"></div>
-      </div>
+    <div class="cta-row">
+      <!-- Ganti href="#" dengan link ke halaman semua post (mis. blog.html atau Medium/dev.to) -->
+      <a href="#" class="btn-primary">See All My Posts <span class="arrow">→</span></a>
     </div>
   </section>
 
