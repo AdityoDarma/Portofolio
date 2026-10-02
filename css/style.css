@@ -945,7 +945,7 @@ a {
 
 /* Blog carousel: satu kartu besar, geser dengan panah / swipe */
 .blog-carousel {
-  max-width: 1000px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -967,11 +967,7 @@ a {
 
 .card.blog-slide {
   flex: 0 0 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto 1fr;
-  column-gap: 48px;
-  padding: 32px;
+  padding: 28px;
   cursor: default;
 }
 
@@ -980,30 +976,28 @@ a {
   box-shadow: none;
 }
 
-.blog-slide .card-top {
-  grid-column: 1;
-}
-
-.blog-slide h3 {
-  grid-column: 1;
-  font-size: 40px;
-  line-height: 1.15;
-}
-
-.blog-slide p.desc {
-  grid-column: 1;
-  font-size: 17px;
-  max-width: 420px;
+.blog-slide .date-pill {
+  align-self: flex-start;
+  margin-bottom: 20px;
 }
 
 .blog-slide .card-photo {
-  grid-column: 2;
-  grid-row: 1 / span 3;
-  margin-top: 0;
-  aspect-ratio: 4 / 3;
-  max-height: 340px;
-  align-self: center;
+  margin: 0 0 24px;
+  aspect-ratio: 16 / 9;
+  max-height: 420px;
   user-select: none;
+}
+
+.blog-slide h3 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.blog-slide p.desc {
+  font-size: 16px;
+  max-width: 640px;
+  margin-bottom: 0;
 }
 
 .blog-controls {
@@ -1359,21 +1353,17 @@ footer hr {
   }
 
   .card.blog-slide {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    padding: 24px;
+    padding: 20px;
   }
 
   .blog-slide .card-photo {
-    grid-column: 1;
-    grid-row: auto;
-    margin-top: 8px;
-    aspect-ratio: 16 / 10;
-    max-height: 240px;
+    aspect-ratio: 4 / 3;
+    max-height: 260px;
+    margin-bottom: 20px;
   }
 
   .blog-slide h3 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
 
