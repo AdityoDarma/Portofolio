@@ -644,6 +644,8 @@ a {
 .date-pill {
   display: inline-flex;
   align-items: center;
+  width: fit-content;
+  justify-self: start;
   padding: 8px 16px;
   border-radius: 999px;
   font-size: 13px;
